@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from './components/layout/Header'
 
 const Food = () => {
     return (
         <div>
-        <h1> corriendo</h1>
+        <Header />
         </div>
     )
 }
