@@ -2,6 +2,7 @@ const express = require('express');
 const clientControllers = require('../controllers/clientControllers');
 const productControllers = require('../controllers/productControllers');
 const orderControllers = require('../controllers/orderControllers');
+const userControllers = require('../controllers/userControllers');
 
 const router = express.Router();
 
@@ -40,6 +41,11 @@ router.get('/food/api/pedidos/:id',orderControllers.showOrderById);
 router.put('/food/api/pedidos/:id', orderControllers.updateOrderById);
 //eliminar un pedido
 router.delete('/food/api/pedidos/:id', orderControllers.deleteOrderById)
+
+//Users
+router.post('/food/api/crear-cuenta', userControllers.createNewUser);
+
+router.post('/food/api/iniciar-sesion', userControllers.authUser);
 
 
     return router

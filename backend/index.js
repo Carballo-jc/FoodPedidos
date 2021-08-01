@@ -12,8 +12,9 @@ mongoose.connect(`${URL_CONNECTION}${DB}`,{
     useCreateIndex:true,
     useFindAndModify:false
 },()=>{
-    console.log('conectado a la db')
-});
+    console.log('conectado a la db');
+}
+);
 //crear el servidor
 const app = express();
 // app.use(express.json());
