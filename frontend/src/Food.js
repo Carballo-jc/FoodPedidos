@@ -1,12 +1,17 @@
-import React from 'react'
-import Header from './components/layout/Header'
+import React from "react";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import Header from "./components/layout/Header";
 
 const Food = () => {
-    return (
-        <div>
-        <Header />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Router>
+        <Switch>
+          <Header />
+        </Switch>
+      </Router>
+    </div>
+  );
+};
 
-export default Food
+export default Food;

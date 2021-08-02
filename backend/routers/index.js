@@ -44,7 +44,6 @@ router.delete('/food/api/pedidos/:id', orderControllers.deleteOrderById)
 
 //Users
 router.post('/food/api/crear-cuenta', userControllers.createNewUser);
-
 router.post('/food/api/iniciar-sesion', userControllers.authUser);
 
 

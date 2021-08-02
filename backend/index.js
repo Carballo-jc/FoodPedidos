@@ -2,6 +2,8 @@ require('dotenv').config();
 const express = require('express');
 const routers = require('./routers');
 const mongoose = require('mongoose');
+const cors = require('cors');
+//variables
 const {URL_CONNECTION,DB}= process.env
 
 //conectar mongo
@@ -21,6 +23,8 @@ const app = express();
 //habilitar el parseo de los datos
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+//habilitar cors
+app.use(cors());
 //rutas de la app
 app.use('/',routers())
 
